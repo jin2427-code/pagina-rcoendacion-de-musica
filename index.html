@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>recomendador de musica</title>
+
+    <style>
+        body {
+            background: black;
+            color: white;
+            text-align: center;
+            front-family: Arical, sans-serif;
+        }
+
+        h1 {
+            margin-top: 50px;
+            font-size: 45px;
+            color: #0ff;
+            text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+        }
+
+        p {
+            color: #aaa;
+        }
+
+        button {
+            background: transparent;
+            color: #0ff;
+            border: 2px solid #0ff;
+            padding: 12px 25px;
+            margin: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 16px;
+            border-radius: 8px;
+        }
+
+        button:hover {
+            background: #0ff;
+            color: black;
+            box-shadow: 0 0 15px #0ff;
+        }
+        
+        #resultado {
+            margin-top: 40px;
+            font-size: 24px;
+            color: #fff;
+            text-shadow: 0 0 5px #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1> recomendador </h1>
+
+    <p>como te sientes?</p>
+
+    <button onclick="recomendar('triste')">😕 triste</button>
+    <button onclick="recomendar('feliz')">😄 feliz</button>
+    <button onclick="recomendar('relajado')">😌 relajado</button>
+    <button onclick="recomendar('emocionado')">😝 emocionado</button>
+
+    <h2 id="resultado"></h2>
+
+    <script>
+        function recomendar(estado) {
+            let url = "";
+
+            if (estado === "triste") {
+                url = "https://www.youtube.com/watch?v=9GkVhgIeGJQ";
+            } else if (estado === "feliz"){
+                url = "youtube.com/watch?v=ma9I9VBKPiw ";
+            } else if (estado === "relajado"){
+                url = "https://www.youtube.com/watch?v=mzJj5-lubeM&list=RDmzJj5-lubeM&start_radio=1";
+            } else if (estado === "emocionado"){
+                url = "https://www.youtube.com/watch?v=hTWKbfoikeg&list=RDhTWKbfoikeg&start_radio=1";
+            }
+            
+            window.open(url, "_blank");
+        }
+    </script>
+
+</body>
+</html>
